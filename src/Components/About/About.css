@@ -1,0 +1,143 @@
+.about__container {
+    grid-template-columns: minmax(280px, 360px) minmax(0, 1fr);
+    align-items: center;
+    column-gap: 4rem;
+}
+
+.about__visual {
+    position: relative;
+}
+
+.about__img {
+    width: 100%;
+    border-radius: 2rem;
+    justify-self: center;
+    box-shadow: var(--surface-shadow);
+}
+
+.about__quote {
+    position: absolute;
+    right: -1.5rem;
+    bottom: 1.5rem;
+    max-width: 16rem;
+    padding: 1rem 1.1rem;
+    border-radius: 1.25rem;
+    background: rgba(24, 50, 45, 0.92);
+    color: #f8f4ea;
+    font-size: var(--small-font-size);
+    box-shadow: 0 16px 35px rgba(24, 50, 45, 0.24);
+}
+
+.about__info {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 0.75rem;
+    margin-bottom: var(--mb-1-5);
+}
+
+.about__box {
+    background-color: var(--container-color);
+    border: 1px solid var(--surface-border);
+    border-radius: 1rem;
+    text-align: center;
+    padding: 1rem 0.9rem;
+    box-shadow: var(--surface-shadow);
+    backdrop-filter: blur(18px);
+}
+
+.about__icon {
+    font-size: 1.5rem;
+    color: var(--accent-color-dark);
+    margin-bottom: var(--mb-0-5);
+}
+
+.about__title {
+    font-size: var(--small-font-size);
+    font-weight: var(--font-medium);
+}
+
+.about__subtitle {
+    font-size: var(--tiny-font-size);
+}
+
+.about__description {
+    padding-right: 1rem;
+    margin-bottom: var(--mb-2-5);
+}
+
+.about__details {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: var(--mb-2);
+}
+
+.about__detail-card {
+    padding: 1rem 1.1rem;
+    border-radius: 1rem;
+    border: 1px solid var(--surface-border);
+    background: rgba(255, 255, 255, 0.62);
+}
+
+.about__detail-label {
+    display: inline-block;
+    color: var(--accent-color-dark);
+    font-size: var(--small-font-size);
+    margin-bottom: 0.45rem;
+}
+
+.about__detail-text {
+    margin: 0;
+}
+
+@media screen and (max-width: 992px) {
+    .about__container {
+        grid-template-columns: 1fr;
+        row-gap: 2.5rem;
+    }
+
+    .about__img {
+        width: min(100%, 280px);
+    }
+
+    .about__box {
+        padding: 0.75rem 0.5rem;
+    }
+
+    .about__data {
+        text-align: center;
+    }
+
+    .about__info {
+        justify-content: center;
+    }
+
+    .about__description {
+        padding: 0;
+        margin-bottom: 2rem;
+    }
+
+    .about__quote {
+        right: 1rem;
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .about__info {
+        grid-template-columns: 1fr;
+    }
+
+    .about__description {
+        padding: 0;
+    }
+
+    .about__quote {
+        position: static;
+        max-width: 100%;
+        margin-top: 1rem;
+    }
+  }
+  
+  @media screen and (max-width: 350px) {
+    .about__info {
+        grid-template-columns: 1fr;
+    }
+  }

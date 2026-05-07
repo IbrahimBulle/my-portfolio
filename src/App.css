@@ -1,0 +1,246 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap");
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 4rem;
+
+  --title-color: #18322d;
+  --title-color-dark: #0b1715;
+  --text-color: #4b6159;
+  --text-color-light: #6f857d;
+  --body-color: #f7f3e8;
+  --body-color-alt: #efe6d4;
+  --container-color: rgba(255, 255, 255, 0.72);
+  --accent-color: #c7823b;
+  --accent-color-dark: #9a5f23;
+  --surface-border: rgba(24, 50, 45, 0.08);
+  --surface-shadow: 0 22px 50px rgba(24, 50, 45, 0.12);
+
+  --body-font: "Winky Sans", sans-serif;
+  --body-font-2: "Roboto Serif", serif;
+  --body-font-3: "Roboto Serif", serif;
+
+  --big-font-size: 4rem;
+  --h1-font-size: 2.25rem;
+  --h2-font-size: 1.5rem;
+  --h3-font-size: 1.25rem;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.875rem;
+  --smaller-font-size: 0.813rem;
+  --tiny-font-size: 0.625rem;
+
+  --font-normal: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  --mb-0-25: 0.25rem;
+  --mb-0-5: 0.5rem;
+  --mb-0-75: 0.75rem;
+  --mb-1: 1rem;
+  --mb-1-5: 1.5rem;
+  --mb-2: 2rem;
+  --mb-2-5: 2.5rem;
+  --mb-3: 3rem;
+
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+
+/* Responsive typography */
+@media screen and (max-width: 992px) {
+  :root {
+    --big-font-size: 3.2rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: 0.938rem;
+    --small-font-size: 0.813rem;
+    --smaller-font-size: 0.75rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(199, 130, 59, 0.18), transparent 28%),
+    radial-gradient(circle at 85% 15%, rgba(24, 50, 45, 0.12), transparent 24%),
+    linear-gradient(180deg, #f8f4ea 0%, #f2eadc 100%);
+  color: var(--text-color);
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--title-color);
+  font-weight: var(--font-semi-bold);
+}
+
+p {
+  line-height: 1.7;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.main {
+  overflow: clip;
+}
+
+.section {
+  padding: 6rem 0 2rem;
+}
+
+.section__title {
+  font-size: var(--h1-font-size);
+  color: var(--title-color);
+  font-family: var(--body-font-3);
+}
+
+.section__subtitle {
+  display: block;
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+  margin-bottom: 3rem;
+}
+
+.section__title,
+.section__subtitle {
+  text-align: center;
+}
+
+.container {
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/*=============== BUTTONS ===============*/
+.button {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--title-color) 0%, #24554b 100%);
+  color: #f9f5eb;
+  padding: 1rem 1.7rem;
+  border-radius: 999px;
+  font-weight: var(--font-medium);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 15px 30px rgba(24, 50, 45, 0.18);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 38px rgba(24, 50, 45, 0.22);
+}
+
+.button--ghost {
+  background: transparent;
+  color: var(--title-color);
+  border: 1px solid rgba(24, 50, 45, 0.16);
+  box-shadow: none;
+}
+
+.button__icon {
+  margin-left: var(--mb-0-5);
+}
+
+.button--flex {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+::-webkit-scrollbar {
+  width: 0.75rem;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(24, 50, 45, 0.08);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(24, 50, 45, 0.28);
+  border-radius: 999px;
+}
+
+/*=============== BREAKPOINTS ===============*/
+@media screen and (max-width: 992px) {
+  .container {
+    margin-left: var(--mb-1-5);
+    margin-right: var(--mb-1-5);
+  }
+
+  .button {
+    padding: 1rem 1.75rem;
+  }
+
+  .button__icon {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section {
+    padding: 5rem 0 1.5rem;
+  }
+
+  .section__subtitle {
+    margin-bottom: var(--mb-3);
+  }
+}
+
+@media screen and (max-width: 350px) {
+  :root {
+    --big-font-size: 2.25rem;
+  }
+
+  .container {
+    margin-left: var(--mb-1);
+    margin-right: var(--mb-1);
+  }
+}
