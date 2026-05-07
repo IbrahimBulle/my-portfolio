@@ -99,8 +99,10 @@
     }
 
     .nav__list {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+        width: 100%;
     }
 
     .nav__close {
@@ -128,8 +130,9 @@
     }
 
     .nav__link {
-        justify-content: center;
-        padding: 0.75rem;
+        justify-content: flex-start;
+        width: 100%;
+        padding: 0.9rem 1rem;
         border-radius: 1rem;
         background: rgba(24, 50, 45, 0.04);
     }
