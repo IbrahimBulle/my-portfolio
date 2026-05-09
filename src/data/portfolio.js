@@ -153,7 +153,7 @@ export const educationTimeline = [
 export const journeyTimeline = [
   {
     title: "Mental Health Product Builds",
-    subtitle: "AfyaMind, AfyaMentBackend, and related wellness projects",
+    subtitle: "AfyaMind, AfyaMindBackend, and related wellness projects",
     period: "April 2026",
     details:
       "Built product ideas around check-ins, assessments, journaling, appointments, and early-support experiences with a strong backend component.",
@@ -196,7 +196,7 @@ export const projectsData = [
   },
   {
     id: 2,
-    title: "AfyaMentBackend",
+    title: "AfyaMindBackend",
     description:
       "Go backend project centered on mental wellness assessments and structured support flows, designed for practical API-driven health experiences.",
     category: "Backend",
