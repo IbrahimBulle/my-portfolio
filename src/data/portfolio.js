@@ -9,7 +9,8 @@ export const personalInfo = {
   githubUrl: "https://github.com/IbrahimBulle",
   blogUrl: "https://tech-blog-vytu.onrender.com/",
   resumeUrl: "/cv/Abdiwali-Ibrahim-Bulle-CV.pdf",
-  avatarUrl: "https://avatars.githubusercontent.com/u/172893216?v=4",
+  //avatarUrl: "https://avatars.githubusercontent.com/u/172893216?v=4",
+  avatarUrl: "/src/assets/ibra3.jpeg",
   heroDescription:
     "Backend-first builder focused on Go, APIs, and practical software that solves real problems. I enjoy learning in public, shipping projects, and turning coursework into working products.",
   aboutDescription:
